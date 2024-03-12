@@ -11,11 +11,17 @@ public class LightSwitchView : MonoBehaviour, IInteractable
 
     private void Start() => currentState = SwitchState.Off;
 
-    private void OnEnable() => lightSwitchDelegate += OnLightSwitchToggled;
+    private void OnEnable() => lightSwitchDelegate += OnLightSwitchToggled; // subscribe
+
+    private void OnDisable() => lightSwitchDelegate -= OnLightSwitchToggled; // unsubscribe
+
+    // 1. Always append the listeners using +=
+    // 2. Always unsubscribe to any delegate/event
+    // 3. Always have null check before invoking any delegate using ?.
 
     public void Interact()
     {
-        lightSwitchDelegate.Invoke();
+        lightSwitchDelegate?.Invoke();
     }
     private void toggleLights()
     {
