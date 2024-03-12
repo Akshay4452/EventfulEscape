@@ -7,15 +7,11 @@ public class LightSwitchView : MonoBehaviour, IInteractable
     private SwitchState currentState;
 
     public delegate void LightSwitchDelegate(); // signature of delegate
-    public LightSwitchDelegate lightSwitchDelegate; // instance of delegate
+    public static LightSwitchDelegate lightSwitchDelegate; // instance of delegate (public static variable is not recommended)
 
     private void Start() => currentState = SwitchState.Off;
 
-    private void OnEnable()
-    {
-        lightSwitchDelegate = OnLightSwitchToggled;
-        lightSwitchDelegate += OnLightSwitchToggleSound;
-    }
+    private void OnEnable() => lightSwitchDelegate += OnLightSwitchToggled;
 
     public void Interact()
     {
@@ -46,14 +42,8 @@ public class LightSwitchView : MonoBehaviour, IInteractable
 
     private void OnLightSwitchToggled()
     {
-        Debug.Log("Light Switch Toggle called...");
         toggleLights();
         GameService.Instance.GetInstructionView().HideInstruction();
-    }
-
-    private void OnLightSwitchToggleSound()
-    {
-        Debug.Log("Light Switch Toggle Sound called...");
         GameService.Instance.GetSoundView().PlaySoundEffects(SoundType.SwitchSound);
     }
 }
