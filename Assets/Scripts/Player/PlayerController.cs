@@ -27,13 +27,13 @@ public class PlayerController
         playerState = PlayerState.InDark;
 
         EventService.Instance.OnLightSwitchToggled.AddListener(onLightSwitch);
-        //EventService.Instance.OnKeyPickUp.AddListener(onKeyPickUp);
+        EventService.Instance.OnKeyPickedUp.AddListener(onKeyPickUp);
     }
 
     ~PlayerController()
     {
         EventService.Instance.OnLightSwitchToggled.RemoveListener(onLightSwitch);
-        //EventService.Instance.OnKeyPickUp.RemoveListener(onKeyPickUp);
+        EventService.Instance.OnKeyPickedUp.RemoveListener(onKeyPickUp);
     }
     public void Interact() => IsInteracted = Input.GetKeyDown(KeyCode.E) ? true : (Input.GetKeyUp(KeyCode.E) ? false : IsInteracted);
 
@@ -49,7 +49,7 @@ public class PlayerController
 
     public void Move(Rigidbody playerRigidbody, Transform transform)
     {
-        GetInput();
+        getInput();
 
         Quaternion rotation;
         Vector3 position;
@@ -64,7 +64,7 @@ public class PlayerController
         PlayerState = PlayerState.Dead;
     }
 
-    private void GetInput()
+    private void getInput()
     {
         horizontalAxis = Input.GetAxis("Horizontal");
         verticalAxis = Input.GetAxis("Vertical");
@@ -88,8 +88,8 @@ public class PlayerController
             PlayerState = PlayerState.InDark;
     }
 
-    private void onKeyPickUp()
+    private void onKeyPickUp(int i = 1)
     {
-        KeysEquipped++;
+        KeysEquipped++; // Just passed dummy parameter to match signature of Action event
     }
 }

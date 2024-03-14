@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class KeyView : MonoBehaviour, IInteractable
 {
-    //private void OnEnable() => EventService.Instance.OnKeyPickedUp.AddListener(onKeyPickUp);
-    //private void OnDisable() => EventService.Instance.OnKeyPickedUp.RemoveListener(onKeyPickUp);
     public void Interact()
     {
         int currentKeys = GameService.Instance.GetPlayerController().KeysEquipped;
@@ -13,7 +11,9 @@ public class KeyView : MonoBehaviour, IInteractable
 
         currentKeys++;
         // Invoke the key pick up event after incrementing the keys
-        GameService.Instance.GetGameUI().UpdateKeyText();
+        // -> Key is the publisher
+        // -> Player and UI are subscribers
+        EventService.Instance.OnKeyPickedUp.InvokeEvent(currentKeys);
 
         gameObject.SetActive(false);
     }
