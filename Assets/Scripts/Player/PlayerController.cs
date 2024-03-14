@@ -88,8 +88,8 @@ public class PlayerController
             PlayerState = PlayerState.InDark;
     }
 
-    private void onKeyPickUp(int i = 1)
+    private void onKeyPickUp(int keys)
     {
-        KeysEquipped++; // Just passed dummy parameter to match signature of Action event
+        KeysEquipped = keys;
     }
 }
