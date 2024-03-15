@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &16017725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8591377109066878739, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+  m_PrefabInstance: {fileID: 6752750673420198865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &16017727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16017725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63f02da43eed17458d80b824fc7f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keysRequiredToTrigger: 3
+--- !u!65 &16017728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16017725}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &203687011 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9192946658940668406, guid: 5fb9d3aeda3456c4c884e223e16fb778, type: 3}
@@ -2232,6 +2263,10 @@ PrefabInstance:
       propertyPath: soundService
       value: 
       objectReference: {fileID: 203687011}
+    - target: {fileID: 1149594174271643055, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2005042993226810447, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: soundService
       value: 
@@ -2243,6 +2278,22 @@ PrefabInstance:
     - target: {fileID: 2443645658748825555, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: soundType
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204821529259125518, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5417292
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204821529259125518, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204821529259125518, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204821529259125518, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.49
       objectReference: {fileID: 0}
     - target: {fileID: 3492344741786150290, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: gameUIView
@@ -2300,6 +2351,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6752750672910313825, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6752750672910313854, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6752750673420198879, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: soundService
       value: 
@@ -2312,13 +2371,41 @@ PrefabInstance:
       propertyPath: soundService
       value: 
       objectReference: {fileID: 203687011}
+    - target: {fileID: 7220168615826739779, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445733308643465967, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: keysRequiredToTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725383869687432917, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.073125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725383869687432917, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725383869687432917, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.09
+      objectReference: {fileID: 0}
     - target: {fileID: 7753161721304679378, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7817883885094003339, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8090694453975587124, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: m_Name
       value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339259564172966821, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8410985323073775251, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: soundService
@@ -2348,6 +2435,10 @@ PrefabInstance:
       propertyPath: soundService
       value: 
       objectReference: {fileID: 203687011}
+    - target: {fileID: 8410985325004545555, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8410985324760981946, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
     - {fileID: 6752750673610657977, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
