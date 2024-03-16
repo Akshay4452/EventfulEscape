@@ -17,11 +17,13 @@ public class EventService
     public EventController OnLightSwitchToggled { get; private set; }
     public EventController<int> OnKeyPickedUp { get; private set; }
     public EventController OnLightsOffByGhostEvent { get; private set; }
+    public EventController OnLevelComplete { get; private set; }
 
     public EventService()
     {
         OnLightSwitchToggled = new EventController();
         OnKeyPickedUp = new EventController<int>();
         OnLightsOffByGhostEvent = new EventController();
+        OnLevelComplete = new EventController();
     }
 }

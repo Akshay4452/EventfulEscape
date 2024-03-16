@@ -9,5 +9,6 @@
     JumpScare2,
     JumpScare3,
     KeyPickUp,
-    DrinkPotion
+    DrinkPotion,
+    LevelComplete
 }
