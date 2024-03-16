@@ -17,12 +17,14 @@ public class PlayerSanity : MonoBehaviour
     {
         EventService.Instance.OnRatRush.AddListener(onSupernaturalEvent);
         EventService.Instance.OnSkullDrop.AddListener(onSupernaturalEvent);
+        EventService.Instance.OnPotionDrink.AddListener(onDrankPotion);
         
     }
     private void OnDisable()
     {
         EventService.Instance.OnRatRush.RemoveListener(onSupernaturalEvent);
         EventService.Instance.OnSkullDrop.RemoveListener(onSupernaturalEvent);
+        EventService.Instance.OnPotionDrink.RemoveListener(onDrankPotion);
 
     }
     void Update()
@@ -70,7 +72,7 @@ public class PlayerSanity : MonoBehaviour
         increaseInsanity(sanityDropAmountPerEvent);
     }
 
-    private void OnDrankPotion(int potionEffect)
+    private void onDrankPotion(int potionEffect)
     {
         decreaseInsanity(potionEffect);
     }
