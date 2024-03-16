@@ -16,6 +16,7 @@ public class CameraView : MonoBehaviour
         EventService.Instance.OnLightsOffByGhostEvent.AddListener(Shake);
         EventService.Instance.OnPlayerDeathEvent.AddListener(Shake);
         EventService.Instance.OnRatRush.AddListener(Shake);
+        EventService.Instance.OnSkullDrop.AddListener(Shake);
     }
 
     private void OnDisable()
@@ -23,6 +24,7 @@ public class CameraView : MonoBehaviour
         EventService.Instance.OnLightsOffByGhostEvent.RemoveListener(Shake);
         EventService.Instance.OnPlayerDeathEvent.RemoveListener(Shake);
         EventService.Instance.OnRatRush.RemoveListener(Shake);
+        EventService.Instance.OnSkullDrop.RemoveListener(Shake);
     }
 
     private void Start()
